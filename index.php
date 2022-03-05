@@ -1,64 +1,68 @@
 <?php
 $quizName = "quiz1"; // THE NAME OF THE QUIZ Q&A TEXT FILE ie: 'quiz1' must be saved as 'quiz1.txt' in dir 'quizzes'
 
+# points for every question [BOLD : font-weight-bold]
+# quiz navigator
+# better question flagger
+# change code for cards other than true/false
 
 function printQuizQuestion($num, $questionType, $questionAnswer, $questionText){
     $answersHTML = "";
     if($questionType == "t/f"){
         $answers = array("True", "False");
         $answer = $answers[0];
-        $answerRadioHTML = "<div class='form-check'><input class='form-check-input' type='radio' name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
+        $answerRadioHTML = "<div class='form-check border-top mb-2'><div class='mt-1'><input class='form-check-input' type='radio' name='flexRadioDefault' id='flexRadioDefault1'></div><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
         $answersHTML = $answersHTML . $answerRadioHTML;
         $answer = $answers[1];
-        $answerRadioHTML = "<div class='form-check'><input class='form-check-input' type='radio' name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
+        $answerRadioHTML = "<div class='form-check border-top mb-2'><div class='mt-1'><input class='form-check-input' type='radio' name='flexRadioDefault' id='flexRadioDefault1'></div><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
         $answersHTML = $answersHTML . $answerRadioHTML;
     } else if($questionType == "m/c-3"){
         $answers = array("Answer a", "Answer b", "Answer c");
         $answer = $answers[0];
-        $answerRadioHTML = "<div class='form-check'><input class='form-check-input' type='radio' name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
+        $answerRadioHTML = "<div class='form-check border-top mb-2'><input class='form-check-input border-top' type='radio' name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
         $answersHTML = $answersHTML . $answerRadioHTML;
         $answer = $answers[1];
-        $answerRadioHTML = "<div class='form-check'><input class='form-check-input' type='radio' name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
+        $answerRadioHTML = "<div class='form-check border-top mb-2'><input class='form-check-input border-top' type='radio' name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
         $answersHTML = $answersHTML . $answerRadioHTML;
         $answer = $answers[2];
-        $answerRadioHTML = "<div class='form-check'><input class='form-check-input' type='radio' name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
+        $answerRadioHTML = "<div class='form-check border-top mb-2'><input class='form-check-input border-top' type='radio' name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
         $answersHTML = $answersHTML . $answerRadioHTML;
     } else if($questionType == "m/c-4"){
         $answers = array("Answer a", "Answer b", "Answer c", "Answer d");
         $answer = $answers[0];
-        $answerRadioHTML = "<div class='form-check'><input class='form-check-input' type='radio' name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
+        $answerRadioHTML = "<div class='form-check border-top mb-2'><input class='form-check-input border-top' type='radio' name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
         $answersHTML = $answersHTML . $answerRadioHTML;
         $answer = $answers[1];
-        $answerRadioHTML = "<div class='form-check'><input class='form-check-input' type='radio' name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
+        $answerRadioHTML = "<div class='form-check border-top mb-2'><input class='form-check-input border-top' type='radio' name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
         $answersHTML = $answersHTML . $answerRadioHTML;
         $answer = $answers[2];
-        $answerRadioHTML = "<div class='form-check'><input class='form-check-input' type='radio' name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
+        $answerRadioHTML = "<div class='form-check border-top mb-2'><input class='form-check-input border-top' type='radio' name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
         $answersHTML = $answersHTML . $answerRadioHTML;
         $answer = $answers[3];
-        $answerRadioHTML = "<div class='form-check'><input class='form-check-input' type='radio' name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
+        $answerRadioHTML = "<div class='form-check border-top mb-2'><input class='form-check-input border-top' type='radio' name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
         $answersHTML = $answersHTML . $answerRadioHTML;
     } else if($questionType == "m/c-5"){
         $answers = array("Answer a", "Answer b", "Answer c", "Answer d", "Answer e");
         $answer = $answers[0];
-        $answerRadioHTML = "<div class='form-check'><input class='form-check-input' type='radio' name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
+        $answerRadioHTML = "<div class='form-check border-top mb-2'><input class='form-check-input border-top' type='radio' name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
         $answersHTML = $answersHTML . $answerRadioHTML;
         $answer = $answers[1];
-        $answerRadioHTML = "<div class='form-check'><input class='form-check-input' type='radio' name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
+        $answerRadioHTML = "<div class='form-check border-top mb-2'><input class='form-check-input border-top' type='radio' name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
         $answersHTML = $answersHTML . $answerRadioHTML;
         $answer = $answers[2];
-        $answerRadioHTML = "<div class='form-check'><input class='form-check-input' type='radio' name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
+        $answerRadioHTML = "<div class='form-check border-top mb-2'><input class='form-check-input border-top' type='radio' name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
         $answersHTML = $answersHTML . $answerRadioHTML;
         $answer = $answers[3];
-        $answerRadioHTML = "<div class='form-check'><input class='form-check-input' type='radio' name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
+        $answerRadioHTML = "<div class='form-check border-top mb-2'><input class='form-check-input border-top' type='radio' name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
         $answersHTML = $answersHTML . $answerRadioHTML;
         $answer = $answers[4];
-        $answerRadioHTML = "<div class='form-check'><input class='form-check-input' type='radio' name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
+        $answerRadioHTML = "<div class='form-check border-top mb-2'><input class='form-check-input border-top' type='radio' name='flexRadioDefault' id='flexRadioDefault1'><label class='form-check-label' for='flexRadioDefault1'>" . $answer . "</label></div>";
         $answersHTML = $answersHTML . $answerRadioHTML;
     } else if($questionType == "s/a"){
         $answerBoxHTML = "<input type='text' class='form-control' style='width: 10rem'>";
         $answersHTML = $answersHTML . $answerBoxHTML;
     }
-    $cardHTML = "<div class='card text-dark bg-light mb-3' style='max-width: 90rem;'><div class='card-header'><div class='form-check form-switch'><input class='form-check-input' type='checkbox' id='flexSwitchCheckDefault'></div></div><div class='card-body'><h5 class='card-title'>Question " . $num . "</h5><p class='card-text'>" . $questionText . "</p><form>" . $answersHTML . "</form></div></div>";
+    $cardHTML = "<div class='card text-dark bg-light mb-3' style='max-width: 90rem;'><div class='card-header'><div class='form-check form-switch'><input class='form-check-input border-top' type='checkbox' id='flexSwitchCheckDefault'></div><h5 class='card-title fw-bold mt-1'>Question " . $num . "</h5></div><div class='card-body' style='background-color: white'><p class='card-text'>" . $questionText . "</p><form>" . $answersHTML . "</form></div></div>";
     echo $cardHTML;
 }
 ?>
@@ -71,7 +75,7 @@ function printQuizQuestion($num, $questionType, $questionAnswer, $questionText){
     <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
     <link rel="icon" href="resources/icon.svg" type="image/x-icon">
 </head>
-<body>
+<body style="font-family: sans-serif;">
 <div class="p-5" style="width: 90rem">
     <?php
     printQuizQuestion("1", "t/f", "t", "Some quick example text to BUILD on the card title and make up the bulk of the card's content.");
